@@ -14,13 +14,13 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 [image0]: ./images/chessboard_with_corners.png "Chessboard"
 [image1]: ./images/undistort_output.png "Undistorted"
-[image2]: ./images/undistort_output_1.png "Undistorted 1"
+[image2]: ./images/undistorted_ouput_1.png "Undistorted 1"
 [image3]: ./images/gradient_xy_output.png "Gradient xy"
 [image4]: ./images/gradient_xy_output_1.png "Gradient xy 1"
 [image5]: ./images/gradient_mag_output.png "Gradient Magnitude"
 [image6]: ./images/gradient_dir_output.png "Gradient Direction"
 [image7]: ./images/color_channel_output.png "Color Threshold"
-[image8]: ./images/combined_grad_output.jpg "Combined Binary"
+[image8]: ./images/combined_grad_output.png "Combined Binary"
 [image9]: ./images/perspective_transform_output.png "Warped"
 [image10]: ./images/perspective_transform_output_curve.png "Warped 1"
 [image11]: ./images/histogram_output.png "Histogram"
@@ -29,8 +29,8 @@ The goals / steps of this project are the following:
 [image14]: ./images/search_around_output.png "Search Around"
 [image15]: ./images/radius_of_curvature_diagram.png "RoC Diagram"
 [image16]: ./images/radius_of_curvature_equation.png "RoC Equation"
-[image17]: ./images/results.png "Output"
-[image18]: ./images/results_with_text.png "Final Output"
+[image17]: ./images/result.png "Output"
+[image18]: ./images/result_with_text.png "Final Output"
 [video1]: ./project_video.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
