@@ -58,19 +58,21 @@ These detected image and object points are then used in the function `calibrateC
 
 #### 1. Distortion correction
 
-Distortion can change the apparent size and shape of an object in an image, cause an objects appearance to change depending on where it is in the FOV and make objects appear closer or farther away than they actually are. To avoid these things, the distortion coefficients and calibration matrix from above is used to apply a distortion correction using the function undistort()  which maps the distorted points on an image to undistorted points.
+Distortion can change the apparent size and shape of an object in an image, cause an objects appearance to change depending on where it is in the FOV and make objects appear closer or farther away than they actually are. To avoid these things, the distortion coefficients and calibration matrix from above is used to apply a distortion correction using the function `undistort()`  which maps the distorted points on an image to undistorted points.
 
 ![alt text][image1]
+
 ![alt text][image2]
 
 #### 2. Gradients and Color transforms
 
 Now that the camera is calibrated for distortion and the raw images have been undistorted, color transforms and gradients can be used to create a threshold binary image. 
-First, I compute the gradient by essentially taking the derivative of the undistorted image in the x and y direction respectively using the OpenCV function Sobel() . Taking the gradient in the x direction emphasizes edges closer to vertical. Alternatively, taking the gradient in the y direction emphasizes edges closer to horizontal.
+First, I compute the gradient by essentially taking the derivative of the undistorted image in the x and y direction respectively using the OpenCV function `Sobel()` . Taking the gradient in the x direction emphasizes edges closer to vertical. Alternatively, taking the gradient in the y direction emphasizes edges closer to horizontal.
 
 These gradients are than set between binary thresholds to select pixels based on the strength of the gradient. 
 
 ![alt text][image3]
+
 ![alt text][image4]
 
 Although both gradients pick up the lane lines well, taking the gradient in the x direction does a better job. In order to see the maximum rate of change at each point, the magnitude of the gradient was computed as seen below:
@@ -82,6 +84,7 @@ Gradient magnitude is basis for the Canny edge detection, and is why Canny works
 ![alt text][image6]
 
 The gradient computations above require the undistorted image to be converted from RGB/BGR to GRAYSCALE and in doing this conversion, valuable color information is lost. To obtain more information about the image, a more robust color space is used, HLS. 
+
 In this color space the S refers to saturation, the measurement of colorfulness. As colors get lighter and closer to white, they have a lower saturation value, whereas colors that are the most intense, like a bright primary color, have a high saturation value. The S channel picks up the lines well as seen below
 
 ![alt text][image7]
@@ -104,7 +107,7 @@ A perspective transform maps the points in a given image to different, desired, 
 | Top Left          | 550, 480    | 205, 0          |
 
 These source and destination points are used in the function
-getPerspectiveTransform()to obtain the transformation matrix, M. M is then applied to the function warpPerspective() to warp the image to a top-down view and the destination points are then drawn on to the image. 
+`getPerspectiveTransform()`to obtain the transformation matrix, M. M is then applied to the function `warpPerspective()` to warp the image to a top-down view and the destination points are then drawn on to the image. 
 
 The points selected above are tested on a straight line image first as seen below 
 
@@ -123,6 +126,7 @@ Two different methods were used to detect the lane lines: sliding window search 
 First, a histogram of where the binary activations occur across the image is computed and split into two sides, one for each line. The two highest peaks from the histogram provides a starting point for determining where the lane lines are.
 
 ![alt text][image11]
+
 ![alt text][image12]
 
 A sliding window is then used to move upward in the image (further along the road) to determine where the lane lines go. A second-order polynomial is also fitted to the lanes detected from the histogram as seen below. The number of sliding windows are represented by the green rectangles and the size of each window is defined by the parameter “margin”.
