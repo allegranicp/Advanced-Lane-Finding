@@ -180,16 +180,16 @@ Here's a [link to my video result](./project_video.mp4)
 
 #### Potential shortcomings
 
-•    Unexpected inputs (previous lane line markings, shadows, and varying pavement colors) that cause the pipeline to make a few mistakes. 
-•    The pipeline may also not do well if objects cover the lane line.
-•    Sanity checks don’t provide enough verification of the lane which causes the detection region to sometimes fall short of the lane distance on curves.
+* Unexpected inputs (previous lane line markings, shadows, and varying pavement colors) that cause the pipeline to make a few mistakes. 
+* The pipeline may also not do well if objects cover the lane line.
+* Sanity checks don’t provide enough verification of the lane which causes the detection region to sometimes fall short of the lane distance on curves.
 
 #### Possible Improvements
 There is much room for improvements to this project:
 
-•    Use of heat maps and other color spaces to retain more information about an image.
-•    Implementing more sanity checks to ensure detected lanes are valid. e.g. coefficient check for change in fits, if change is too sharp then the lane detection may have been off.
-•    Use detected corners from the camera calibration to find the source and destination points for the perspective transform.
-•    Add yellow and white color mask to better detect the lanes
+* Use of heat maps and other color spaces to retain more information about an image.
+* Implementing more sanity checks to ensure detected lanes are valid. e.g. coefficient check for change in fits, if change is too sharp then the lane detection may have been off.
+* Use detected corners from the camera calibration to find the source and destination points for the perspective transform.
+* Add yellow and white color mask to better detect the lanes
 
 
