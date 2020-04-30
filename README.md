@@ -31,7 +31,7 @@ The goals / steps of this project are the following:
 [image16]: ./images/radius_of_curvature_equation.png "RoC Equation"
 [image17]: ./images/result.png "Output"
 [image18]: ./images/result_with_text.png "Final Output"
-[video1]: ./project_video.mp4 "Video"
+[video]: ./project_video.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 ---
@@ -172,7 +172,7 @@ Numerical estimation of lane curvature and vehicle position are then added to th
 
 ### Pipeline (video)
 
-Here's a [link to my video result](./project_video.mp4)
+Here's a link to my final video [video](./project_video.mp4)
 
 ---
 
