@@ -13,6 +13,8 @@ The goals / steps of this project are the following:
 * Warp the detected lane boundaries back onto the original image.
 * Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
+![alt text][image17]
+
 [//]: # (Image References)
 [image0]: ./images/chessboard_with_corners.png "Chessboard"
 [image1]: ./images/undistort_output.png "Undistorted"
